@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecg_app/components/button.dart';
@@ -112,6 +113,14 @@ class Login_Screen extends StatelessWidget {
           ],
         ),
       )),
-    );
+    
+
+class Login_Screen extends StatelessWidget {
+  const Login_Screen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+
   }
 }

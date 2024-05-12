@@ -1,6 +1,9 @@
+
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:ecg_app/components/patient_details.dart';
+import 'package:ecg_app/screens/review_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 class Dashboard_Screen extends StatefulWidget {
   Dashboard_Screen({super.key});
@@ -132,6 +135,7 @@ class _Dashboard_ScreenState extends State<Dashboard_Screen> {
 
             SizedBox(
               height: 250,
+
               child: PageView.builder(
                 onPageChanged: (index) {
                   pageno = index;
@@ -147,6 +151,32 @@ class _Dashboard_ScreenState extends State<Dashboard_Screen> {
                       child: Patient_Details());
                 },
                 itemCount: 8,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Reviw_Screen()),
+                  );
+                },
+                child: PageView.builder(
+                  onPageChanged: (index) {
+                    pageno = index;
+                    setState(() {});
+                  },
+                  controller: pageController,
+                  itemBuilder: (_, index) {
+                    return AnimatedBuilder(
+                        animation: pageController,
+                        builder: (context, child) {
+                          return child!;
+                        },
+                        child: Patient_Details(
+                          reviewed: true,
+                        ));
+                  },
+                  itemCount: 8,
+                ),
+
               ),
             ),
 
