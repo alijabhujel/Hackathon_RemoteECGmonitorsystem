@@ -1,6 +1,9 @@
-import 'package:ecg_app/screens/login_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ecg_app/screens/login_screen.dart';
+
+
 
 class Logout extends StatelessWidget {
   const Logout({super.key});
