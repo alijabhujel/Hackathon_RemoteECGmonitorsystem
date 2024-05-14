@@ -1,0 +1,3 @@
+FirebaseData fbdo;
+FirebaseAuth auth;
+FirebaseConfig config;
