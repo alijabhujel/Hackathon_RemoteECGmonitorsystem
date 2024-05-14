@@ -1,0 +1,5 @@
+ Firebase.begin(&config, &auth);
+  Firebase.reconnectWiFi(true);
+  pinMode(18, INPUT); // Setup for leads off detection LO +
+  pinMode(19, INPUT); // Setup for leads off detection LO -
+  pinMode(5, INPUT);   // Setup for pulse sensor signal pin
